@@ -7,7 +7,6 @@ Inquirer
 
 ## Usage 
 node.js   
-
 npm install inquirer
 npm install
 npm run start to activate commandline
