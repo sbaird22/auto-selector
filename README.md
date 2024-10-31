@@ -17,7 +17,7 @@ Authored by @sbaird22
 Not looking at pull requests
 
 ## License
-MIT
+[MIT](https://chooselicense.com/licenses/mit/)
 
 ## Description
 Here is a link to a video displaying function    
