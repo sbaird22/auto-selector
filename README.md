@@ -6,7 +6,8 @@ Uses node package modules
 Inquirer
 
 ## Usage 
-node.js
+node.js   
+
 npm install inquirer
 npm install
 npm run start to activate commandline
