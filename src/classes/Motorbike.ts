@@ -21,7 +21,7 @@ class Motorbike extends Vehicle {
     weight: number,
     topSpeed: number,
     wheels: Wheel[]
-  ) {
+  ){
     
     super();
     
@@ -40,6 +40,16 @@ class Motorbike extends Vehicle {
       this.wheels = wheels;
     }
   }
+  // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
+
+    wheelie():void {
+      if (this.started) {
+      console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie! `);
+    } else {
+      console.log('Start the vehicle first');
+    }
+  }
+  
 
   override printDetails(): void {
     super.printDetails();
@@ -61,11 +71,5 @@ class Motorbike extends Vehicle {
     );
   }
 }
-// Motorbike.prototype.wheelie = function(){
-//   console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!` )
-// }
-// motorbike.wheelie();
-  // TODO: Implement the wheelie method
-    // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
 
 export default Motorbike;

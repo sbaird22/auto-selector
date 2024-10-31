@@ -5,7 +5,6 @@ import Car from './Car.js';
 import Wheel from './Wheel.js';
 import AbleToTow from '../interfaces/AbleToTow.js';
 
-// TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
 class Truck extends Vehicle implements AbleToTow{
   vin: string;
   color: string;
@@ -14,8 +13,8 @@ class Truck extends Vehicle implements AbleToTow{
   year: number;
   weight: number;
   topSpeed: number;
-  wheels: Wheel[];
   towingCapacity: number;
+  wheels: Wheel[];
 
   // Constructor for the Truck class
   constructor(
@@ -26,8 +25,8 @@ class Truck extends Vehicle implements AbleToTow{
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: Wheel[],
-    towingCapacity: number
+    towingCapacity: number,
+    wheels: Wheel[]
   ) {
     // Call the constructor of the parent class, Vehicle
     super();
@@ -49,14 +48,19 @@ class Truck extends Vehicle implements AbleToTow{
   }
 
 
-  // TODO: Implement the tow method from the AbleToTow interface
-  tow(vehicle: Truck | Motorbike | Car): void {
-    // if {this.make && this.model === true
+  tow(vehicle: Truck | Motorbike | Car): void {  
+    if (vehicle.make && vehicle.model && vehicle.weight <= this.towingCapacity){
+        console.log(`${vehicle} is being towed.`)
+    }
+    else{
+      console.log(`${vehicle} is too heavy to be towed.`)
+    }
+  };
     // TODO: Get the make an model of the vehicle if it exists
     // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
     // TODO: If it is, log that the vehicle is being towed
     // TODO: If it is not, log that the vehicle is too heavy to be towed
-    }
+    
   
 
   override printDetails(): void {
@@ -69,6 +73,7 @@ class Truck extends Vehicle implements AbleToTow{
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
+    console.log(`Towing Capacity: ${this.towingCapacity}`);
 
     // Print details of the wheels
     console.log(
