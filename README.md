@@ -20,5 +20,5 @@ Not looking at pull requests
 MIT
 
 ## Description
-Here is a link to a video displaying function 
+Here is a link to a video displaying function    
 https://drive.google.com/file/d/1pVZEBLpuburZgYY8T382_OI_cRIL7gUX/view
